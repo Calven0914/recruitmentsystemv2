@@ -1,0 +1,200 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" type="icon" href="img/favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/a168cf4844.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo"><img src="img/logo.png" alt="Yamiraku" height="80px weight 100px"></a>
+
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="lesson.html">Lesson</a>
+            <a href="contact.html">Contact</a>
+            <a href="career.php">Career</a>
+            <a href="login.php">Login</a>
+            
+            
+        
+        </nav> 
+        
+
+    </header>
+    <section class="home ">
+        <div class="home-content">
+            <h1 >Welcome To 
+                Yamiraku Music Studio</h1>
+            <h3>Explore Something You Like.</h3>
+            <div class="btn-box">
+                <a href="about.html">Learn More</a>
+
+            </div>
+        </div>
+        <div class="home-sci" >
+            <a href="https://www.facebook.com"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="https://www.instagram.com"><i class='bx bxl-instagram'></i></a>
+            <a href="https://twitter.com"><i class='bx bxl-twitter'></i></a>
+        </div>
+    </section>
+
+    <!--About Us-->
+    <section class="about">
+        <div class="main">
+            <img src="img/background2.jpg" class="animate">
+            <div class="about-text">
+                <h2 class="animate">About Us</h2>
+                <h5 class="animate" ><span>Yamiraku</span> Music Studio</h5>
+                <p class="animate">
+                    Established in 2020 by two dedicated musicians, we've expanded into a vibrant music enthusiast community. With three locations, we now serve over 1000 students and employ 20 instructors. Our goal is to offer top-tier music instruction that ignites, drives, and empowers our students to achieve their utmost potential.
+                </p>
+                <button type="button" onclick='window.location = "about.html"'  class="animate">Learn More</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Service Page -->
+    <section class="service animate">
+    <div class="service animate">
+        <div class="title">
+            <h2>Our Services</h2>
+        </div>
+        <div class="box">
+            <div class="card animate">
+                <i class="fa-solid fa-guitar animate"></i>
+                <h5 class="animate" >Guitar</h5>
+                <div class="pra animate">
+                    <p>Guitar Lession with professional lecturer from beginer to expert.</p>
+                    <p style="text-align: center;"><a class="button" href="lesson.html">Learn More</a>
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="card animate">
+                <i class='bx bxs-piano animate'></i>
+                <h5 class="animate">Piano</h5>
+                <div class="pra animate">
+                    <p>Piano Lession with professional lecturer from beginer to expert.</p>
+                    <p style="text-align: center;"><a class="button" href="lesson.html">Learn More</a>
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="card animate">
+                <i class="fa-solid fa-drum animate"></i>
+                <h5 class="animate">Drum</h5>
+                <div class="pra animate">
+                    <p>Drum Lession with professional lecturer from beginer to expert.</p>
+                    <p style="text-align: center;"><a class="button" href="lesson.html">Learn More</a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- Go up Button-->
+<a href="#" class="to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+</a>
+
+
+    <!--Footer -->
+    <footer>
+    <p>Yamiraku Music Studio</p>
+    <p><i>Where words fail, music speaks.</i></p>
+    <div class="foot-sci">
+        <a href="https://www.facebook.com"><i class='bx bxl-facebook-circle'></i></a>
+        <a href="https://www.instagram.com"><i class='bx bxl-instagram'></i></a>
+        <a href="https://twitter.com"><i class='bx bxl-twitter'></i></a>
+    </div>
+    <p style="color: white;">Yamiraku Music Studio, Copyright © 2023</p>
+
+</footer>
+
+<script>
+    //nav scroll animation
+ const body =document.body;
+ let lastScroll = 0;
+ 
+ window.addEventListener('scroll',() =>{
+     const currentScroll = window.pageYOffset
+ 
+     if (currentScroll <= 0){
+         body.classList.remove("scroll-up")
+     }
+ 
+     if(currentScroll > lastScroll && !body.classList.contains("scroll-down")){
+         body.classList.remove("scroll-up")
+         body.classList.add("scroll-down")
+     }
+ 
+     if(currentScroll < lastScroll && body.classList.contains("scroll-down")){
+         body.classList.remove("scroll-down")
+         body.classList.add("scroll-up")
+     }
+ 
+     lastScroll = currentScroll;
+ })
+
+ const sections = document.querySelectorAll("section");
+
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150; // Removed the semicolon and fixed the offset calculation
+        let height = sec.offsetHeight;
+
+        if (top >= offset && top < offset + height) {
+            sec.classList.add('show-animate');
+        } 
+    });
+};
+
+
+//to-top button
+
+const toTop = document.querySelector(".to-top");
+
+window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 100) {
+        toTop.classList.add("active");
+    } else {
+        toTop.classList.remove("active");
+    }
+
+
+})
+
+
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,187 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson</title>
+    <link rel="shortcut icon" type="icon" href="img/favicon.ico">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/a168cf4844.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body style="background-color: rgb(186, 186, 186);">
+
+    <header class="header">
+        <a href="index.html" class="logo"><img src="img/logo.png" alt="Yamiraku" height="80px weight 100px"></a>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="lesson.html"  class="active">Lesson</a>
+            <a href="contact.html">Contact</a>
+            <a href="career.php">Career</a>
+            <a href="login.php">Login</a>
+            
+            
+        
+        </nav> 
+        
+
+    </header>
+    <section class="home" style="background: url(img/background4.jpg) 70% 63% no-repeat fixed  ;">
+        <div class="home-content ">
+            <h1 >Lesson We Offer</h1>
+            <h3>Find Something Suits You</h3>
+          
+        </div>
+    </section>
+
+    
+    <!--Guitar lesson-->
+    <section class="guitar animate">
+        <div class="guitar-container animate">
+            <h2 class="g-title animate">Guitar Lessons</h2>
+            <div class="guitar-content " >
+                <div class="guitar-image">
+                    <img src="img/guitar.jpg" alt="guitar">
+                </div>
+                <div class="guitar-text">
+                    <h3>Guitar Lesson</h3>
+                    <p>Discover the world of music with our professional guitar lessons. Our experienced instructors provide personalized guidance to help you master the guitar, regardless of your skill level. Contact us today to start your musical journey."
+                    </p>
+                    <button type="button" onclick='window.location = "contact.html"' >Contact Us Now!</button>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br>
+        </div>
+    
+    </section>
+
+    <!--piano section-->
+
+    <section class="piano animate">
+        <div class="piano-container animate" style="background-color: rgb(186, 186, 186);">
+            <h2 class="p-title">Piano Lessons</h2>
+            <div class="piano-content">
+                <div class="piano-image">
+                    <img src="img/background4.jpg" alt="piano">
+                </div>
+                <div class="piano-text">
+                    <h3>Piano Lesson</h3>
+                    <p>Experience the joy of playing the piano with our professional lessons. Our skilled instructors offer personalized guidance for all levels. Contact us for pricing and start making beautiful music today."
+                    </p>
+                    <button type="button" onclick='window.location = "contact.html"' >Contact Us Now!</button>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br>
+        </div>
+    
+    </section>
+
+    <!--Drum lesson-->
+    <section class="drum animate">
+        <div class="drum-container animate" style="background-color: rgb(186, 186, 186);">
+            <h2 class="d-title">DrumKit Lessons</h2>
+            <div class="drum-content">
+                <div class="drum-image">
+                    <img src="img/background3.jpg" alt="drum">
+                </div>
+                <div class="drum-text">
+                    <h3>Drum Kit Lesson</h3>
+                    <p>Unlock your rhythmic potential with our professional drum kit lessons. Taught by experienced instructors, our personalized lessons cater to all skill levels. Contact us for pricing and start drumming to your own beat today.
+                    </p>
+                    <button type="button" onclick='window.location = "contact.html"' >Contact Us Now!</button>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br>
+        </div>
+        
+    
+    </section>
+  
+
+
+
+
+
+
+
+<!-- Go up Button-->
+<a href="#" class="to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+</a>
+
+
+    <!--Footer -->
+    <footer>
+    <p>Yamiraku Music Studio</p>
+    <p><i>Where words fail, music speaks.</i></p>
+    <div class="foot-sci">
+        <a href="https://www.facebook.com"><i class='bx bxl-facebook-circle'></i></a>
+        <a href="https://www.instagram.com"><i class='bx bxl-instagram'></i></a>
+        <a href="https://twitter.com"><i class='bx bxl-twitter'></i></a>
+    </div>
+    <p style="color: white;">Yamiraku Music Studio, Copyright © 2023</p>
+
+</footer>
+
+<script>
+    //nav scroll animation
+ const body =document.body;
+ let lastScroll = 0;
+ 
+ window.addEventListener('scroll',() =>{
+     const currentScroll = window.pageYOffset
+ 
+     if (currentScroll <= 0){
+         body.classList.remove("scroll-up")
+     }
+ 
+     if(currentScroll > lastScroll && !body.classList.contains("scroll-down")){
+         body.classList.remove("scroll-up")
+         body.classList.add("scroll-down")
+     }
+ 
+     if(currentScroll < lastScroll && body.classList.contains("scroll-down")){
+         body.classList.remove("scroll-down")
+         body.classList.add("scroll-up")
+     }
+ 
+     lastScroll = currentScroll;
+ })
+
+ const sections = document.querySelectorAll("section");
+
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150; // Removed the semicolon and fixed the offset calculation
+        let height = sec.offsetHeight;
+
+        if (top >= offset && top < offset + height) {
+            sec.classList.add('show-animate');
+        } 
+    });
+};
+
+//to-top button
+
+const toTop = document.querySelector(".to-top");
+
+window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 100) {
+        toTop.classList.add("active");
+    } else {
+        toTop.classList.remove("active");
+    }
+
+
+})
+
+
+</script>
+    
+</body>
+</html>

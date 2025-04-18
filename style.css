@@ -1,0 +1,1447 @@
+* {
+   
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+body{
+    min-height: 100vh;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide vertical scrollbar */
+    
+}
+
+
+
+
+
+/*Scroll JS stuff */
+.scroll-down header{
+    transform: translate3d(0, -100%,0);
+    transition: .4s;
+}
+
+.scroll-up header{
+    transition: .4s;
+
+}
+/* Nav css */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+
+}
+
+.logo {
+    font-size: 25px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight:600 ;
+
+}
+
+.navbar a { 
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 550;
+    margin-left: 45px;
+
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: rgb(242, 137, 9);
+}
+
+.home {
+    height: 100vh;
+    background: url(img/background.jpg) 100% no-repeat ;
+    display:flex ;
+    align-items: center;
+    padding: 0 10%;
+}
+.home img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.home-content{
+    
+    max-width:650px;
+}
+
+.home-content h1{
+    
+    font-size: 55px;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    background:url(img/back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+
+}
+
+
+@keyframes back{
+    100%{
+        background-position:2000px 0 ;
+    }
+}
+.home-content h3{
+    font-size: 28px;
+    padding: 20px 0 40px;
+    font-weight: 650;
+    color: rgb(255, 94, 0);
+
+
+}
+
+.home-content .btn-box{
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.btn-box a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: rgb(236, 109, 19);
+    border: 2px solid rgb(191, 92, 5);
+    border-radius: 8px;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+
+
+}
+
+.btn-box a:hover{
+    color: white;
+    background: black;
+
+
+}
+
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(232, 83, 8);
+    border-radius: 50px;
+    font-size: 20px;
+    color: rgb(168, 77, 8);
+    text-decoration: none;
+
+
+
+
+}
+
+
+
+.home-sci a:hover{
+    color: white;
+    background: black;
+    scale: 1.3;
+    transition: .4s;
+
+}
+
+#btn{
+    top: 0;
+    left: 0;
+    bottom: 20px;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #ebeaea,#e38800);
+    border-radius: 30px;
+    transition: .5s;
+
+}
+
+.home-sci{
+    margin: 30px auto;
+    text-align: center;
+}
+
+.social-icons img{
+    width: 30px;
+    margin: 0 12px;
+    box-shadow: 0 0 20px 0 #7f7f7f3d;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.home-sci img:hover{
+    padding-bottom: .5rem;
+}
+
+.input-group{
+    top: 180px;
+    align-items: center;
+    position: absolute;
+    width: 280px;
+
+    transition: .5s;
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left:0 ;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+
+}
+
+.submit-btn{
+padding: 10px 15px  ;
+width: 50%;
+left: 50%;
+cursor:pointer ;
+display: block;
+background: linear-gradient(to right, #f5f2f2,#ed7f02);
+border: 0;
+outline: none;
+font-size: 15px;
+border-radius: 20px;
+margin:80px ; /* Center horizontally and add some space below */
+
+
+
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Optional: To center vertically within the viewport */
+  }
+
+  /*login page */
+  .form-signin {
+    max-width: 330px;
+    padding: 1rem;
+  }
+  
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+
+
+/*About Us */
+
+.about{
+    width: 100%;
+    padding: 100px 0px;
+    background-color: black;
+}
+
+.about img{
+    height: 65%;
+    width: 40%;
+}
+.about-text{
+    width: 550px;
+}
+
+.main{
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-text h2{
+    color: white;
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+.about-text h5{
+    color: white;
+    letter-spacing:2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+
+}
+
+.about-text p{
+    color: #f5a344dc;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+}
+.main span{
+    color: red;
+}
+
+button {
+    background-color: #e38800;
+    color: black;
+    border: 2px solid #e38800;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+
+}
+
+.button {
+    background-color: #e38800;
+    color: black;
+    border: 2px solid #e38800;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transition: .4s;
+
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+
+
+}
+
+/*Service / Lesson */
+.service{
+    background: #000000;
+    width: 100%;
+    padding: 100px 0px;
+    overflow: hidden;
+
+}
+.service .box{
+    background-color: black;
+  }
+
+.title h2{
+    color: white;
+    font-size: 75px;
+    width: 1130px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    
+
+}
+.card{
+    height: 365px;
+    width: 335px;
+    padding: 20px 35px;
+    background: #191919;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+
+.card i{
+    font-size: 50px;
+    display: block;
+    text-align:center;
+    margin: 25px 0px;
+    color: #e38800;
+}
+
+h5 {
+    color: white;
+    font-size: 23px;
+    margin-top: 15px;
+
+}
+
+.pra p{
+    color: #ed7f02;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 25px;
+}
+
+.card .button{
+    background-color: #e38800;
+    color: black;
+    border: 2px solid #e38800;
+    font-weight: bold;
+    padding: 9px 22px;
+    border-radius: 30px;
+    transition: .4s;
+    text-decoration: none;
+}
+
+.card .button:hover{
+    background-color: black;
+    color: white;
+    
+}
+
+/* Lesson page CSS*/
+
+.guitar-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.g-title{
+    font-size: 4em;
+    margin-bottom: 50px;
+
+}
+
+.guitar-content{
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.guitar-content .guitar-image{
+    position: relative;
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.guitar-content .guitar-image img{
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% ;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.guitar-content .guitar-text{
+    z-index: 222;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transform: translate(-30px, 50px);
+
+}
+.guitar-content .guitar-text h3{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.guitar-content .guitar-text p{
+    text-align: justify;
+}
+
+/*piano */
+
+.piano-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.p-title{
+    font-size: 4em;
+    margin-bottom: 50px;
+
+}
+
+.piano-content{
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.piano-content .piano-image{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    
+}
+
+.piano-content .piano-image img{
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 450;
+    width: 80% ;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.piano-content .piano-text{
+    z-index: 222;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transform: translate(-620px, 50px);
+
+}
+.piano-content .piano-text h3{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.piano-content .piano-text p{
+    text-align: justify;
+}
+
+/* Drumkit css*/
+.drum-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.d-title{
+    font-size: 4em;
+    margin-bottom: 50px;
+
+}
+
+.drum-content{
+    position: relative;
+    width: 1150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.drum-content .drum-image{
+    position: relative;
+    width: 600px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.drum-content .drum-image img{
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% ;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.drum-content .drum-text{
+    z-index: 222;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    max-width: 400px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transform: translate(-30px, 50px);
+
+}
+.drum-content .drum-text h3{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.drum-content .drum-text p{
+    text-align: justify;
+}
+
+/*About Us Page CSS */
+#branch{
+    padding: 50px 0;
+}
+
+.branch-list{
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr)) ;
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.b1{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.b1 img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: 0.5s;
+    height: 100%;
+   
+}
+.branches h1{
+    text-align: center;
+    font-weight: 50px;
+    font-size: 65px;
+    padding-top: 10px;
+    color: white;
+}
+.layer {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(255, 255, 255, 0.6), #e38800);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 45px;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 50px;
+    color: black;
+    text-decoration: none;
+    font-size: 45px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+}
+
+.layer i{
+    align-items: center;
+}
+
+.b1:hover img{
+
+    transform: scale(1.1);
+}
+
+.b1:hover .layer{
+    height: 100%;
+
+    
+}
+
+/*Contact page CSS */
+.text-black {
+    color: #000; }
+  
+  .content {
+    padding: 7rem 0; }
+  
+  .heading {
+    font-size: 2.5rem;
+    font-weight: 900; }
+  
+  .form-control {
+    border: none;
+    background: #f3f3f3; }
+    .form-control:active, .form-control:focus {
+      outline: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-color: #000;
+      background: #f3f3f3; }
+  
+  .col-form-label {
+    color: #000; }
+  
+  .btn, .form-control, .custom-select {
+    height: 50px; }
+  
+  .custom-select:active, .custom-select:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #000; }
+  
+  .btn {
+    border: none;
+    border-radius: 4px !important; }
+    .btn.btn-primary {
+      background: #000;
+      color: #fff;
+      padding: 15px 20px; }
+    .btn:hover {
+      color: #fff; }
+    .btn:active, .btn:focus {
+      outline: none;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+  
+      
+  .box {
+    padding: 40px;
+    background: #fff;
+    -webkit-box-shadow: -30px 30px 0px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: -30px 30px 0px 0 rgba(0, 0, 0, 0.08); }
+    .box h3 {
+      font-size: 14px;
+      margin-bottom: 30px;
+      text-align: center; }
+  
+  label.error {
+    font-size: 12px;
+    color: red; }
+  
+ 
+  
+  .submitting {
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+    display: none;
+    font-weight: bold;
+    font-size: 12px;
+    color: #000; }
+
+    .row {
+        padding-top: 50px 0;
+        padding-left: 70px ;
+    }
+
+    .contact-row {
+        padding-top: 30px 20px;
+
+
+    }
+
+
+    /*Login Page CSS */
+
+    
+    .login-container{
+        padding-left: 50%;
+        position: relative;
+        width: 500px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login-container i{
+        position: absolute;
+        inset: 0;
+        border: 2px solid #fff;
+        transition: 0.5s;
+
+    }
+
+    
+
+    .login-container .login{
+        position: absolute;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .login-container .login h2{
+        font-size: 2em;
+        color: white;
+    }
+
+    .login-container .login .inputBx{
+        position: relative;
+        width: 100%;
+    }
+
+    .login-container .login .inputBx input{
+        position: relative;
+        width: 100%;
+        padding: 12px 20px;
+        background: transparent;
+        border: 2px solid white;
+        border-radius: 40px;
+        font-size: 1.2em;
+        color: white;
+        box-shadow: none;
+        outline: none;
+
+    }
+
+    .login-container .login .inputBx input::placeholder{
+        
+        color: rgba(255, 255, 255, 0.75);
+
+    }
+
+    .login-container .login .inputBx input[type="submit"]{
+        background: #e38800;
+        border:none;
+        cursor: pointer;
+        font-size: 1.2em;
+    }
+
+/*------ Setting ------*/
+    .set-container{
+        padding-left: 20%;
+        padding-top: 10%;
+
+
+
+
+    }
+
+
+    /*------ Career Page ------ */
+    .car-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+      }
+      .car-card > hr {
+        margin-right: 0;
+        margin-left: 0;
+      }
+      .car-card > .list-group {
+        border-top: inherit;
+        border-bottom: inherit;
+      }
+      .car-card > .list-group:first-child {
+        border-top-width: 0;
+        border-top-left-radius: calc(0.25rem - 1px);
+        border-top-right-radius: calc(0.25rem - 1px);
+      }
+      .car-card > .list-group:last-child {
+        border-bottom-width: 0;
+        border-bottom-right-radius: calc(0.25rem - 1px);
+        border-bottom-left-radius: calc(0.25rem - 1px);
+      }
+      
+      .car-card-body {
+        flex: 1 1 auto;
+        min-height: 1px;
+        padding: 1.25rem;
+      }
+
+
+
+    
+  
+
+
+
+/* To-Top Button*/
+.to-top {
+    background: white;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #e38800;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+    z-index: 1;
+}
+
+.to-top.active{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+    z-index: 1;
+}
+
+.to-top:hover{
+    color: black;
+    background: #ed7f02;
+}
+
+
+
+
+
+
+/* Footer CSS*/
+
+footer{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p:nth-child(1){
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+footer p:nth-child(2){
+    font-size: 17px;
+    color: white;
+    width: 500px;
+    text-align: center;
+    line-height: 26px;
+}
+
+.foot-sci{
+    display: flex;
+
+
+}
+
+.foot-sci a{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e38800;
+    border-radius: 50%;
+    margin: 22px 10px;
+    color: black;
+    border: 2px solid #e38800;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+.foot-sci a:hover{
+    color: white;
+    background: black;
+    scale: 1.3;
+    transition: .4s;
+
+}
+
+/*Page Transition CSS */
+
+section .animate{
+    transition: 1s;
+    filter:blur(2px);
+}
+
+section.show-animate .animate{
+ 
+    filter:blur(0);
+    transform: translateX(0);
+}
+
+
+
+.about .animate{
+    transform: scale(0.7);
+
+}
+
+.about.show-animate .animate{
+    transform:scale(1);
+    transition: 1s;
+
+
+}
+
+.service .animate{
+    transform: translateX(-200px);
+
+}
+
+.service.show-animate .animate{
+    transform: translateX(0);
+ 
+}
+
+.service .animate .card:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+/*Lesson onscroll transition */
+
+.guitar-container .animate{
+    transform: translateX(-220px);
+    
+}
+
+.guitar .animate{
+    transform: translateX(-220px);
+    
+}
+
+.guitar-container.animate .show-animate{
+    transform: translateX(0px);
+    
+}
+
+
+.piano-container .animate{
+    transform: translateX(250px);
+    
+}
+
+.piano .animate{
+    transform: translateX(250px);
+    
+}
+
+.piano-container.animate .show-animate{
+    transform: translateX(0px);
+    
+}
+.drum-container .animate{
+    transform: translateY(200px);
+    
+}
+
+.drum .animate{
+    transform: translateY(200px);
+    
+}
+
+.drum-container.animate .show-animate{
+    transform: translateY(0px);
+    
+}
+
+.branch .animate{
+    transform: scale(0.7);
+    
+}
+
+.branches .animate .show-animate{
+    transform: scale(1);
+    
+}
+
+
+
+
+
+
+
+
+.wrapper {
+    max-width: 350px;
+    min-height: 500px;
+    margin: 80px auto;
+    padding: 40px 30px 30px 30px;
+    background-color: #ecf0f3;
+    border-radius: 15px;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+
+.login-logo {
+    width: 80px;
+    margin: auto;
+}
+
+.login-logo img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px #5f5f5f,
+        0px 0px 0px 5px #ecf0f3,
+        8px 8px 15px #a7aaa7,
+        -8px -8px 15px #fff;
+}
+
+.wrapper .name {
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 1.3px;
+    padding-left: 10px;
+    color: #555;
+}
+
+.wrapper .form-field input {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 10px 15px 10px 10px;
+    /* border: 1px solid red; */
+}
+
+.wrapper .form-field {
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+}
+
+.wrapper .form-field .fas {
+    color: #555;
+}
+
+.wrapper .btn {
+    box-shadow: none;
+    width: 100%;
+    height: 40px;
+    background-color: #03A9F4;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #b1b1b1,
+        -3px -3px 3px #fff;
+    letter-spacing: 1.3px;
+}
+
+.wrapper .btn:hover {
+    background-color: #039BE5;
+}
+
+.wrapper a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #03A9F4;
+}
+
+.wrapper a:hover {
+    color: #039BE5;
+}
+
+@media(max-width: 380px) {
+    .wrapper {
+        margin: 30px 20px;
+        padding: 40px 15px 15px 15px;
+    }
+}
+
+.wrapper .error-message {
+    color: red;
+}
+
+/*--------------  Dashbaord ---------------- */
+.sidebar {
+    padding-left: 0;
+    margin-left: 0;
+    position: absolute;
+    width: 60px;
+    height: 100vh;
+    background: #fff;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.sidebar:hover{
+    width: 300px;
+}
+
+.sidebar { 
+    margin: 0;
+
+}
+
+.sidebar ul {
+    margin-left: 0;
+    position: relative;
+    height: 100vh;
+}
+
+.sidebar ul li {
+    margin-left: 0;
+    list-style: none;
+    z-index: 1;
+}
+
+.sidebar ul li:hover {
+   background: #f3f3f3;
+}
+
+.sidebar ul li.active {
+    background: #f3f3f3;
+}
+
+
+
+.sidebar ul li a{
+
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.sidebar ul li a .icon{
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width:60px ;
+    height: 60px;
+    font-size: 1.5em;
+    color: black;
+
+
+}
+
+.sidebar ul li a .text{
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: black;
+    text-transform:uppercase ;
+    letter-spacing: 0.05em;
+
+
+
+}
+
+.sidebar ul li img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width:60px ;
+    height: 60px;
+    font-size: 1.5em;
+    color: black;
+}
+
+.sidebar ul li.dash-logo{
+    margin-bottom: 50px;
+}
+
+.sidebar ul li.dash-logo:hover{
+    background: white;
+}
+
+.sidebar ul li.dash-logo .icon{
+    font-size: 2em;
+}
+
+
+
+.sidebar ul li.dash-logo .text{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.imgBx{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    
+    overflow: hidden;
+
+}
+
+.bottom .imgBx img{
+
+    position: absolute;
+    top: 0;
+    left:-5;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+  
+   
+   
+
+}
+
+/*-------------------- Career Page  ------------------------*/
+
+.form-box .search-field {
+height: 40px;
+width: 150px;
+padding: 10px;
+border: none;
+border-radius: 25px;
+outline: none;
+
+}
+
+.form-box .career {
+    width: 250px;
+}
+
+.form-box .location{
+    width: 150px;
+}
+
+
+
+
+
+/*----------------- Dashboard ---------------*/
+
+
+
+.column {
+    float: left;
+    width: 10%;
+    padding: 0 140px;
+    padding-left: 175px;
+    
+
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the counter cards */
+  .column .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    width: 180px;
+    height: 120px;
+    text-align: center;
+    background-color: #f1f1f1;
+    z-index: -1;
+    
+  }
+  
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  /*------------------- Application CSS ------------------ */
+
+  .app-section{
+    width: 700px;
+    height: 650px;
+    left: 20%;
+    background: grey;
+
+}
